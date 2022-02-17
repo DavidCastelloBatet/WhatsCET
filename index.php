@@ -43,7 +43,7 @@
           <p>Nom 3</p>
         </article>
       </section>
-    </aside>
+    </aside> 
     <!--Acaba aside Conectats-->
 
     <!--Comença Main Xat-->
@@ -51,18 +51,36 @@
       <section class="dialog" id="dialog">
         <article>
           <h3>Nom 1</h3>
-          <p>Missatge a 2</p>
+          <p>Missatge</p>
+          <p>
+            <?php
+            echo $_POST["misatge"];
+            echo $_POST['myfile'];
+            ?>
+          </p>
+            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M10,17L5,12L6.41,10.58L10,14.17L17.59,6.58L19,8M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+            </svg>
+          <p>
+            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M19.78,2.2L24,6.42L8.44,22L0,13.55L4.22,9.33L8.44,13.55L19.78,2.2M19.78,5L8.44,16.36L4.22,12.19L2.81,13.55L8.44,19.17L21.19,6.42L19.78,5Z" />
+            </svg>
+          </p>
         </article>
-        <article>
-          <h3>Nom 2</h3>
-          <p>Missatge a 1</p>
-        </article>
+
       </section>
       <section class="messages" id="messages">
-        <form action="" method="post">
-          <input type="file" name="myfile" id="myfile" />
-          <input type="text" placeholder="Escriu el missatge" name="" id="" />
-          <input type="submit" value="Enviar" />
+        <form action="" method="post" autocomplete="off">
+          <p>
+            <input
+              type="text"
+              placeholder="Escriu el missatge"
+              name="misatge"
+              id="missatge"
+            />
+          </p>
+          <p><input type="file" name="myfile" id="myfile" /></p>
+          <button>enviar</button>
         </form>
       </section>
     </main>
